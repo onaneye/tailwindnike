@@ -1,13 +1,35 @@
+import { CustomerReview, Footer, Specialoffer, SuperQuality, Subscribe, Hero, Services, Popularproduct,  } from "./sections"
+import  Nav from "./Components/Nav"
 
+const App = () =>(
+  <main className="relative">
+    <Nav/>
+    <section className="xl:padding-1 wide:padding-r padding-b">
+        <Hero/>
+    </section>
+    <section className="padding">
+        <Popularproduct/>
+    </section>
+    <section className="padding">
+        <SuperQuality/>
+    </section>
+    <section className="padding-x py-10">
+        <Services/>
+    </section>
+    <section className="padding">
+        <Specialoffer/>
+    </section>
+    <section className="padding bg-pale-blue">
+        <CustomerReview/>
+    </section>
+    <section className="padding-x sm:py-32 py-16 w-full">
+        <Subscribe/>
+    </section>
+    <section className="padding-x bg-black padding-t pb-8">
+        <Footer/>
+    </section>
+  </main>
 
+)
 
-
-export default function App() {
-  return (
-    <h1 className="text-3xl text-center bg-blue-400 py-4
-    my-4
-     font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+export default App
