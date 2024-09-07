@@ -5,6 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    animation: {
+      fade: 'fadeIn 0.5s ease-in',
+    },
+    keyframes: {
+      fadeIn: {
+        '0%': {transform: 'translateY(-5px)' }, // Fixed `translateX`
+        '100%': {transform: 'translateY(0)' },    // Added `transform` property
+      },
+    },
     fontSize: {
       xs: ['12px', '16px'],
       sm: ['14px', '20px'],
@@ -22,7 +31,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
-        'primary': "#ECEEFF",
+        primary: "#ECEEFF",
         "coral-red": "#FF6452",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
@@ -32,11 +41,11 @@ export default {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
       },
       backgroundImage: {
-        'hero': "url('assets/images/collection-background.svg')",
-        'card': "url('assets/images/thumbnail-background.svg')",
+        hero: "url('assets/images/collection-background.svg')",
+        card: "url('assets/images/thumbnail-background.svg')",
       },
       screens: {
-        "wide": "1440px"
+        wide: "1440px"
       }
     },
   },
